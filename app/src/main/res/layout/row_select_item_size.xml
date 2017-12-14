@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.app.swishd.home.send.model.ResponseItemSize.ItemsItem"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/row_select_item_state"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_select_item_size" />
+
+        <TextView
+            android:id="@+id/row_select_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/row_select_item_state"
+            android:ellipsize="end"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:text="@{item.SSizeTitle}"/>
+
+        <TextView
+            android:id="@+id/row_select_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_below="@+id/row_select_item_title"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/row_select_item_state"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="11sp"
+            android:text="@{item.SSizeDescription}"/>
+
+    </RelativeLayout>
+
+</layout>

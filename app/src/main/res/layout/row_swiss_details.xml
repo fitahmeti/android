@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="swiss"
+            type="com.app.swishd.home.send.model.ResponseOfficeList.DetailItem" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/row_swiss_details_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            style="@style/regular_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_toLeftOf="@+id/row_swiss_down_arrow"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@{swiss.SOfficeName}" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/row_swiss_down_arrow"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+        <TextView
+            android:id="@+id/row_swiss_status"
+            style="@style/regular_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_below="@+id/row_swiss_down_arrow"
+            android:layout_toLeftOf="@+id/row_swiss_distance"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text='@{"Status : "+ swiss.workStatus}'
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/row_swiss_distance"
+            style="@style/regular_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/row_swiss_down_arrow"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@{swiss.getDistanceString()}"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/row_swiss_distance"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+</layout>

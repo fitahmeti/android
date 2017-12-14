@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.app.swishd.home.send.interfaces.OnSortByDialogClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+
+        <TextView
+            style="@style/regular_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_any_from_foloowing_list" />
+
+        <RadioGroup
+            android:id="@+id/dialog_sort_by_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <RadioButton
+                android:id="@+id/dialog_sort_by_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/distance" />
+
+            <RadioButton
+                android:id="@+id/dialog_sort_by_open_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_now" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/Button"
+                android:layout_weight="1"
+                android:onClick="@{()->click.onOkClick()}"
+                android:text="@string/ok" />
+
+            <Button
+                style="@style/Button"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:onClick="@{()->click.onCancelClick()}"
+                android:text="@string/cancel" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

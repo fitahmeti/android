@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/frg_recommended_price_heading"
+            style="@style/regular_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="@string/recommended_price"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/frg_recommended_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            >
+
+            <TextView
+                style="@style/regular_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/total"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frg_recommended_insurance_price"
+                style="@style/regular_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frg_recommended_price_custom_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drw_edit_text_background"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                style="@style/regular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/euro"
+                android:textAllCaps="true"
+                android:textSize="35sp" />
+
+            <EditText
+                android:id="@+id/frg_recommended_insurance_price_custom"
+                style="@style/EditText"
+                android:layout_width="wrap_content"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:inputType="numberSigned"
+                android:text="0.00"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frg_recommended_price_breakdown_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/frg_recommended_price_breakdown_drop_down_image"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+            <TextView
+                style="@style/regular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:gravity="center"
+                android:text="@string/see_price_breakdown"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frg_recommended_price_break_down_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/frg_recommended_rewards"
+                layout="@layout/row_recommended_price" />
+
+            <include
+                android:id="@+id/frg_recommended_insurance_fee"
+                layout="@layout/row_recommended_price" />
+
+            <include
+                android:id="@+id/frg_recommended_vat"
+                layout="@layout/row_recommended_price" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/regular_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/frg_recommended_insurance_set_own_price"
+            style="@style/Button"
+            android:layout_gravity="center"
+            android:text="@string/set_own_price" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/frg_recommended_insurance_set_continue"
+            style="@style/Button"
+            android:layout_gravity="center"
+            android:text="@string/continue_string" />
+
+    </LinearLayout>
+</layout>

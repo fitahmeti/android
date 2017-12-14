@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:padding="@dimen/_10sdp">
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/frg_pick_location_mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/frg_pick_location_address_pick_or_drop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:paddingLeft="@dimen/_4sdp"
+            android:paddingRight="@dimen/_4sdp"
+            />
+
+        <include
+            android:id="@+id/frg_pick_location"
+            layout="@layout/pick_location_layout" />
+
+        <TextView
+            android:id="@+id/frg_pick_location_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frg_pick_location"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_4sdp"
+            android:textColor="@android:color/black"
+            android:paddingRight="@dimen/_4sdp"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/frg_pick_location_time_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/frg_pick_location_continue"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/drw_corner_white_background"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/frg_pick_location_date_time"
+                style="@style/regular_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/available_from_flexible" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/frg_pick_location_continue"
+            style="@style/Button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/drw_corner_white_background"
+            android:text="@string/continue_string" />
+
+    </RelativeLayout>
+</layout>

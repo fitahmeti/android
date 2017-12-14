@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9f9f9"
+        android:clickable="true">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f9f9f9">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="?android:attr/actionBarSize"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/black" />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:contentPadding="@dimen/_15sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_10sdp"
+                                    android:text="£0"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_18sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/drw_button_background"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="CASH OUT"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:background="@android:color/white"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/btn_back"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:padding="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_arrow_back" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_notifications" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Wallet"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_13sdp" />
+                    </android.support.v7.widget.Toolbar>
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabGravity="fill"
+                        app:tabMode="fixed"
+                        app:tabTextAppearance="?android:textAppearanceSmall"
+                        app:tabTextColor="@android:color/black">
+
+                        <android.support.design.widget.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <!--android:text="PAYMENT DETAILS"-->
+
+                        <android.support.design.widget.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <!--android:text="TRANSACTION HISTORY"-->
+                    </android.support.design.widget.TabLayout>
+                </android.support.v7.widget.CardView>
+            </android.support.design.widget.AppBarLayout>
+
+            <com.app.swishd.widget.NonSwipeableViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</layout>

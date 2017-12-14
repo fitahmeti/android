@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.stripe:stripe-android-6.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/ae822f07293843369a4a0d7ef164a82a5c49667c/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/ae822f07293843369a4a0d7ef164a82a5c49667c/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

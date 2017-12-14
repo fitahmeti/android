@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.app.swishd.home.search.model.JobDetails.Data" />
+
+    </data>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:contentInsetStart="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:padding="@dimen/_12sdp"
+                        app:srcCompat="@drawable/ic_arrow_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Swiss Hd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:padding="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/frg_select_swishr_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4sdp"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/row_job_list_data_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_8sdp">
+
+                            <LinearLayout
+                                android:id="@+id/select_swishr_product_main_details"
+                                android:layout_width="@dimen/_52sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/_3sdp"
+                                android:paddingRight="@dimen/_3sdp">
+
+                                <ImageView
+                                    android:id="@+id/row_job_list_item_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:paddingLeft="@dimen/_2sdp"
+                                    android:paddingRight="@dimen/_2sdp"
+                                    android:singleLine="true"
+                                    android:text="@{item.jobSize.SSizeTitle}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_toEndOf="@+id/select_swishr_product_main_details"
+                                android:gravity="left|center"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/_8sdp"
+                                android:paddingRight="@dimen/_8sdp">
+
+                                <TextView
+                                    style="@style/regular_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_2sdp"
+                                    android:text="@{item.SJobTitle}"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/regular_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_2sdp"
+                                    android:text='@{"£ "+ String.valueOf(item.getSRecommendedPrice())}'
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/select_swishr_product_main_details"
+                                android:background="@color/gray_light"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_4sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <android.support.v7.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_12sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                app:srcCompat="@drawable/ic_date" />
+
+                                            <TextView
+                                                android:id="@+id/row_job_list_pick_date"
+                                                style="@style/regular_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:maxLines="1"
+                                                android:text="@{item.getFormattedPickDate()}" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <android.support.v7.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_12sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                app:srcCompat="@drawable/ic_time" />
+
+                                            <TextView
+                                                android:id="@+id/row_job_list_pick_time"
+                                                style="@style/regular_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:maxLines="1"
+                                                android:text="@{item.getFormattedPickTime()}" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <android.support.v7.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_12sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                app:srcCompat="@drawable/ic_location" />
+
+                                            <TextView
+                                                style="@style/regular_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:maxLines="1"
+                                                android:text="@{item.sPickAddress}" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <android.support.v7.widget.AppCompatImageView
+                                        android:layout_width="@dimen/_24sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginLeft="@dimen/_2sdp"
+                                        android:layout_marginRight="@dimen/_2sdp"
+                                        android:rotation="180"
+                                        app:srcCompat="@drawable/ic_arrow_back" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_4sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <android.support.v7.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_12sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                app:srcCompat="@drawable/ic_date" />
+
+                                            <TextView
+                                                android:id="@+id/row_job_list_drop_date"
+                                                style="@style/regular_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:maxLines="1"
+                                                android:text="@{item.getFormattedDropDate()}" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <android.support.v7.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_12sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                app:srcCompat="@drawable/ic_time" />
+
+                                            <TextView
+                                                android:id="@+id/row_job_list_drop_time"
+                                                style="@style/regular_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:maxLines="1"
+                                                android:text="@{item.getFormattedDropTime()}" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <android.support.v7.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_12sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                app:srcCompat="@drawable/ic_location" />
+
+                                            <TextView
+                                                style="@style/regular_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:maxLines="1"
+                                                android:text="@{item.sDropAddress}" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                        <ProgressBar
+                            android:id="@+id/frg_select_swishr_progress_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/frg_select_swishr_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layoutManager="LinearLayoutManager" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+</layout>

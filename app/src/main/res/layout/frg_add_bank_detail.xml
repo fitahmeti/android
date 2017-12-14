@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:contentInsetStart="0dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="@dimen/_12sdp"
+                    app:srcCompat="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add Bank Account"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </android.support.v7.widget.Toolbar>
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardBackgroundColor="@android:color/white"
+            app:contentPadding="@dimen/_20sdp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text="Add Bank Details"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Account Holders Name"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:maxLines="1"
+                        android:id="@+id/edt_name"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Account Number"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:nextFocusForward="@id/edt_code"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Sort Code"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <include layout="@layout/divider" />
+
+                    <TextView
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/drw_button_background"
+                        android:gravity="center"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Save"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </ScrollView>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "418850689067",
+    "firebase_url": "https://fir-swishd.firebaseio.com",
+    "project_id": "firebase-swishd",
+    "storage_bucket": "firebase-swishd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418850689067:android:547c0e8316b4c705",
+        "android_client_info": {
+          "package_name": "com.app.swishd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418850689067-d1c183idnl9gailcmmmut5b8vt7k939l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.swishd",
+            "certificate_hash": "27f6ae473ececc963a0978c831c119dff44a107c"
+          }
+        },
+        {
+          "client_id": "418850689067-n6bh33ukj3de8hfhei2r3oqpi0du0scg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.swishd",
+            "certificate_hash": "1935414a9c5baba650dbebcac3254dcbf9b6e603"
+          }
+        },
+        {
+          "client_id": "418850689067-3ll21o5vt2os7nop1jgkjf6e1u2cap8v.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "418850689067-960v3s9to3c8500skq7qsn224cme5jpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3hucoUwf67W7OG7qUZa1TklpQ14LBQXQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418850689067-n7orngl2tep70obi9pndvs48gtonojf7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appchemy.swishd"
+              }
+            },
+            {
+              "client_id": "418850689067-3ll21o5vt2os7nop1jgkjf6e1u2cap8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

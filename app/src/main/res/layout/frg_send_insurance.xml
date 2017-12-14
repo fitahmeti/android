@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_layout"
+            app:contentInsetStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/frg_send_insurance_back_arrow"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Send"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                style="@style/regular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_your_item_value"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/drw_edit_text_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/euro"
+                    android:textAllCaps="true"
+                    android:textSize="40sp" />
+
+                <EditText
+                    android:id="@+id/frg_send_insurance_item_price"
+                    style="@style/EditText"
+                    android:layout_width="wrap_content"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberSigned"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/regular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="@string/insurance_fee"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/frg_send_insurance_price"
+                style="@style/regular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/euro"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/frg_send_insurance_terms_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/i_have_read_t_and_c" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/frg_Send_insurance_accept"
+                    style="@style/Button"
+                    android:layout_weight="1"
+                    android:text="@string/accept" />
+
+                <Button
+                    android:id="@+id/frg_Send_insurance_decline"
+                    style="@style/Button"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="@string/decline" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

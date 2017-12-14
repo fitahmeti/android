@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:elevation="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/frg_layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/frg_barcode_image"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/gray_light" />
+
+                <TextView
+                    android:id="@+id/frg_barcode_text"
+                    style="@style/regular_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frg_barcode_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/frg_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </merge>
+</layout>

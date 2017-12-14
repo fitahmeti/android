@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Facebook Login-->
+    <!--TODO: create app on live account-->
+    <string name="facebook_app_id">192459641296408</string>
+    <string name="fb_login_protocol_scheme">fb192459641296408</string>
+    <string name="google_map_api_key">AIzaSyC3hucoUwf67W7OG7qUZa1TklpQ14LBQXQ</string>
+
+    <!--TODO: Use live stripe key-->
+    <!--pk_test_HbHOHe1bFo4SyWUU47MCXFDx-->
+    <!--pk_live_7N83XoJ96Im7WsTaf2YL0nKC-->
+    <string name="stripe_key">pk_test_HbHOHe1bFo4SyWUU47MCXFDx</string>
+</resources>

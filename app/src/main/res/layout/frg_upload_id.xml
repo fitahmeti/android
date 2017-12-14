@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.app.swishd.BuildConfig" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_layout"
+            app:contentInsetStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Upload ID"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/_12sdp"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/divider" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:text="PHOTO ID"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_176sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="This can be your Passport, Driver License or National ID"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <FrameLayout
+                    android:id="@+id/btn_photo_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/drw_button_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ADD PHOTO ID"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_photo_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+
+                <include layout="@layout/divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:text="PROOF OF ADDRESS"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_176sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="This can be your Passport, Driver License or National ID"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <FrameLayout
+                    android:id="@+id/btn_address_proof"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/drw_button_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ADD ADDRESS DOCUMENTATION"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_address_proof"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_button_background"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:text="SAVE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

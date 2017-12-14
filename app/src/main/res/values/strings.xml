@@ -1,0 +1,255 @@
+<resources>
+    //App Name
+    <string name="app_name">Swishd</string>
+
+    //Splash
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+
+    //Login
+    <string name="username_email">Username/Email</string>
+    <string name="password">Password</string>
+    <string name="forgotten_your_password">Forgotten your password?</string>
+    <string name="log_in_with_facebook">Log in With Facebook</string>
+    <string name="log_in_with_google">Log In With Google</string>
+
+    //Forgot Password
+    <string name="email">Email</string>
+    <string name="reset_password">Reset Password</string>
+
+    //Sign Up
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">username</string>
+    <string name="promo_code">Promocode</string>
+
+    //title
+    <string name="title_login">Login</string>
+    <string name="title_forgot_password">Forgot Password</string>
+
+    //validation Messages
+    <string name="e_please_enter_username_email">Please enter username/email.</string>
+    <string name="e_please_enter_password">Please enter password.</string>
+    <string name="e_please_enter_email">Please enter email.</string>
+    <string name="e_please_enter_first_name">Please enter first name.</string>
+    <string name="e_please_enter_last_name">Please enter last name.</string>
+    <string name="e_please_enter_promo_code">Please enter promo code.</string>
+    <string name="e_please_enter_valid_email_address">Please enter valid email address.</string>
+    <string name="e_no_internet">No internet connection found</string>
+    <string name="e_please_enter_username">Please enter username.</string>
+    <string name="e_please_use_valid_username">Please use valid username.</string>
+    <string name="e_price_must_be_grater_than_50">Price must be greater than \u00a3 50 .</string>
+    <string name="e_please_read_terms_and_conditions">Please select terms and conditions.</string>
+    <string name="e_please_enter_item_title">Please enter item title.</string>
+    <string name="e_please_select_pickup_point">Please select pickup point.</string>
+    <string name="e_please_select_drop_point">Please select drop point.</string>
+    <string name="e_please_enter_amount_grater_than_8">Please enter amount greater than \u00a38.</string>
+    <string name="e_passowrd_must_contains_at_least_6_character">Password must contains at least 6 character.</string>
+    <string name="e_please_select_valid_date_and_time">Please select valid date and time.</string>
+    <string name="e_service_not_available">Service not available .</string>
+    <string name="e_please_provide_pickup_details">Please provide pickup point details</string>
+    <string name="e_please_enter_swishr_email_address">Please enter swishr email address.</string>
+
+    //HomeFragment
+    <array name="title_viewpager">
+        <item>Search</item>
+        <item>Me</item>
+        <item>Sender</item>
+    </array>
+
+    //Progress Dialog
+    <string name="loading_">Loading...</string>
+    <string name="confirmExit">Press BACK again to exit</string>
+
+
+    //Bottom Menu
+    <string name="search">Search</string>
+    <string name="me">Me</string>
+    <string name="sender">Sender</string>
+
+    //Menu
+    //send -insurance
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+
+    //send - Create Item
+    <string name="select_item_size">Select item size</string>
+    <string name="item_value_greater_than_50">Item value greater than \u00a350?</string>
+    <string name="continue_string">Continue</string>
+    <string name="item_title">Item title</string>
+
+    //send - insurance
+    <string name="set_your_item_value">set your item value</string>
+    <string name="euro">\u00a3</string>
+    <string name="euro_price">\u00a3 %.0f</string>
+    <string name="insurance_fee">Insurance fee</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="i_have_read_t_and_c"><![CDATA[I have read and agree to the T&C\'s]]></string>
+
+    //send - Pick Location
+    <string name="or">Or</string>
+    <string name="swisshd_point">Swishd Point</string>
+    <string name="use_address">Use Address</string>
+    <string name="available_from_flexible">Available From : Flexible</string>
+    <string name="pick_location">Pick Location</string>
+    <string name="available_from">Available From : </string>
+
+    //swisshd point
+    <string name="sortby">Sort By</string>
+
+    //Dialog - Sort By
+    <string name="select_any_from_foloowing_list">Select any one to perform sort operation</string>
+    <string name="distance">Distance</string>
+    <string name="open_now">Open Now</string>
+    <string name="e_please_select_any_one_sort_type">Please select any one sort value.</string>
+    <string name="status">status</string>
+
+    //activity - location from map
+    <string name="search_address">Search Address</string>
+    <string name="done">Done</string>
+
+    //send - drop location
+    <string name="drop_location">Drop Location</string>
+    <string name="deliver_by">Deliver By : </string>
+    <string name="deliver_by_flexible">Available From : Flexible</string>
+
+    //recommended
+    <string name="recommended_price">Recommended Price</string>
+    <string name="total">Total</string>
+    <string name="set_own_price">Set Own Price</string>
+    <string name="see_price_breakdown">See Price Breakdown</string>
+    <string name="swishrs_rewards">Swishr\'s rewards</string>
+    <string name="insurance_and_service_fee">Insurance and service fee</string>
+    <string name="vat">Vat</string>
+    <string name="revert_to_default_price">Revert to default price</string>
+    <string name="your_own_price">Your Own Price</string>
+
+    //Confirm Swish
+    <string name="your_price">Your Price</string>
+    <string name="from">From :</string>
+    <string name="to">To :</string>
+    <string name="swish">Swish</string>
+    <string name="pick_up_date">Pick up Date :</string>
+    <string name="drop_off_date">Drop off Date :</string>
+    <string name="upload_job">Upload Job</string>
+
+    //send Congratulations
+    <string name="congratulations">Congratulations</string>
+    <string name="your_item_has_been_successfully_">Your item has been successfully shared with  the swish community.</string>
+    <string name="you_will_be_notified_of_any_">You will be notified of any swishr\'s who accept you job. You can find these in your notifications and in your profile.</string>
+    <string name="view_item">View Item</string>
+    <string name="share">Share</string>
+    <string name="confirm_swish">Confirm Swish</string>
+    <string name="flexible">Flexible</string>
+
+    //Search Location Picker
+    <string name="fromwithoutcolon">From</string>
+    <string name="current_location">Current Location</string>
+    <string name="towithoutcolon">To</string>
+
+    //Search location Fragment
+    <string name="advanced">Advanced</string>
+    <string name="most_used_searches">Most used searches</string>
+    <string name="no_result_found">No Result Found</string>
+
+
+    //search Fragment
+    <string name="for_save_your_journey_search">For save your journey search</string>
+    <string name="search_journey">Search journey</string>
+    <string name="suggested_jobs_for_you">Suggested jobs for you</string>
+    <string name="view_all_your_history_search">View all history search</string>
+    <string name="search_history">Search History</string>
+
+    //Advanced Search
+    <string name="my_journey_happens">My journey happens</string>
+    <string name="anytime">Anytime</string>
+    <string name="everyday">Everyday</string>
+    <string name="specific_date">Specific date</string>
+    <string name="only_show_swished_coolection_point">Only show swished collecting point</string>
+
+    //Job List Fragment
+    <string name="edit">Edit</string>
+
+    //Edit Fragment
+    <string name="edit_search">Edit Search</string>
+
+    //Accept Dialog
+    <string name="job">Job</string>
+    <string name="accept_dailog_message">Do you like to swis job ?</string>
+    <string name="you_are_not_a_swishr_or_collection_point_of_this_job">You are not a swishr or collection point of this job.</string>
+
+    <!--Profile-->
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="about_us">About Us</string>
+    <string name="help">Help</string>
+    <string name="get_in_touch">Get In Touch</string>
+    <string name="notification_setting">Notification Setting</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="refer_a_friend">Refer a Friend</string>
+    <string name="log_out">LOG OUT</string>
+
+    <!--details Screen-->
+    <string name="sender_colon">Sender : </string>
+    <string name="accept_job">Accept Job</string>
+    <string name="propose_date">Propose Date</string>
+
+
+    //accept job offer
+    <string name="aceept_job_offer">Great to here you \n want to help</string>
+    <string name="aceept_job_offer_message" formatted="false">
+        You have notified %s that you  are available for this job.
+    \n \n If successful, your reward will be found in your Swish Wallet on delivery completion.
+    \n \n Swish will let you know %s response in your notifications.You can keep an eye on this job in your profile.</string>
+    <string name="remove_offer">Remove Offer</string>
+
+    //refer friend
+    <string name="refer_friend">Refer Friend</string>
+    <string name="refer_friend_text">Refer a friend and both of you will receive \u00a35 \n credit when they signup </string>
+    <string name="invite_friend">Invite Friend</string>
+    <string name="email_address">Email Address</string>
+
+    //Active Job Details -SwisHr
+    <string name="view_activity">View Activity</string>
+    <string name="view_swishrs">View Swishrs</string>
+    <string name="you_are_helping" formatted="false">You are helping %s</string>
+    <string name="your_swisher" formatted="false">%s is your swishr</string>
+    <string name="swishr_have_offered_to_swish_your_item" formatted="false">%s
+        Swishrs have offered to swish your item.</string>
+    <string name="no_swishr_found">No swishr found</string>
+    <string name="present_your_items_qr_code_message">Present your item QR code or given the above code at your pick up and/or delivery location</string>
+
+    //row select swishr
+    <string name="accep_swishr">Accept Swishr</string>
+    <string name="complete">Completed</string>
+    <string name="late">Late</string>
+    <string name="canceled">Canceled</string>
+
+    //Dialog Accept Offer
+    <string name="accept_offer">Accept offer ?</string>
+    <string name="are_you_sure_want_to_accept_this_offer_from">Are you sure you want to accept this offer from</string>
+
+    //Dialog Congratulation Swishr Selected
+    <string name="you_have_accpted_as_your_swishr_for_this_item" formatted="false">
+        You have accepted %s as your swishr for this item.
+    </string>
+
+    <string name="you_can_view_item_activity_and_contact_on_your_item_page" formatted="false">
+        You can view your item activity and contact %s on your item page.
+    </string>
+
+
+    //Frg Receipt Swishr selected
+    <string name="recipients">Recipients</string>
+    <string name="who_will_be_meeting_your_seishr">Who will be meeting your swishr ?</string>
+    <string name="collect_from">Collect From:</string>
+    <string name="someone_else">Someone Else</string>
+    <string name="delivered_by">Delivered By : </string>
+    <string name="pick_up_by">Pick up by:</string>
+    <string name="recieved_by">Recieved By:</string>
+    <string name="swishr_username">Swishr Username</string>
+    <string name="swishr_email">Swishr Email</string>
+    <string name="mobile">Mobile (Optional)</string>
+
+
+</resources>

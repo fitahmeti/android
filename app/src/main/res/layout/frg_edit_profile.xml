@@ -1,0 +1,212 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.swishd.home.profile.edit.EditProfileFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="profile"
+            type="com.app.swishd.home.profile.model.UserProfile" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_layout"
+            app:contentInsetStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Edit Profile"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/_12sdp"
+                app:srcCompat="@drawable/ic_arrow_back" />
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/divider" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/_62sdp"
+                    android:layout_height="@dimen/_62sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_person"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="ADD/CHANGE PICTURE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FIRST NAME"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <EditText
+                            android:id="@+id/edt_first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/drw_edit_text_background"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:text='@{profile.getFirstName()}'
+                            android:paddingBottom="@dimen/_7sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="LAST NAME"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <EditText
+                            android:id="@+id/edt_last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/drw_edit_text_background"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:text='@{profile.getLastName()}'
+                            android:paddingBottom="@dimen/_7sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="EMAIL"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:text='@{profile.getEmail()}'
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="USERNAME"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+                <EditText
+                    android:id="@+id/edt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:text='@{profile.getUsername()}'
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/btn_save"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/drw_button_background"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:text="SAVE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

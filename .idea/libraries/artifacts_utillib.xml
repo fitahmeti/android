@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="artifacts:utillib">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/utillib-1.2.aar/5d0606aebc3164f4017faf9b4f3152e9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/utillib-1.2.aar/5d0606aebc3164f4017faf9b4f3152e9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

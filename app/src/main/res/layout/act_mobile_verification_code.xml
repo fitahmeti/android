@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.app.swishd.home.profile.verify_mobile.MobileVerificationActivity">
+
+        <android.support.v7.widget.Toolbar
+            app:contentInsetStart="0dp"
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Verification Code"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:padding="@dimen/_12sdp"
+                app:srcCompat="@drawable/ic_arrow_back" />
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/divider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_15sdp"
+            android:text="A CODE HAS BEEN SENT TO"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="'MOBILE NUMBER'"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/btn_edit_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:text="edit"
+            android:textColor="#4564CD"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:gravity="center"
+            android:text="ENTER VERIFICATION CODE"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_11sdp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_code_1"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sdp"
+                    tools:text="1" />
+
+                <TextView
+                    android:id="@+id/tv_code_2"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sdp"
+                    tools:text="2" />
+
+                <TextView
+                    android:id="@+id/tv_code_3"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sdp"
+                    tools:text="3" />
+
+                <TextView
+                    android:id="@+id/tv_code_4"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sdp"
+                    tools:text="4" />
+
+                <TextView
+                    android:id="@+id/tv_code_5"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sdp"
+                    tools:text="5" />
+
+                <TextView
+                    android:id="@+id/tv_code_6"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/drw_edit_text_background"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sdp"
+                    tools:text="6" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionDone"
+                android:cursorVisible="false"
+                android:digits="1234567890"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColor="@android:color/transparent"
+                android:textIsSelectable="false"
+                android:textSize="1px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="123456" />
+
+            <View
+                android:id="@+id/view_code_focus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:gravity="center"
+            android:text="Don't receive the code?"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/btn_resend_code"
+            android:layout_width="@dimen/_142sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/drw_button_background"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="RE-SEND CODE"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:enabled="false"
+            android:id="@+id/btn_enter"
+            android:layout_width="@dimen/_142sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/drw_button_background"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="ENTER"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+</layout>

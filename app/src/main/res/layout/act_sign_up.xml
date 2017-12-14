@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/act_sign_up_toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <EditText
+                    android:id="@+id/act_sign_up_first_name"
+                    style="@style/EditText"
+                    android:hint="@string/first_name"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/act_sign_up_last_name"
+                    style="@style/EditText"
+                    android:hint="@string/last_name"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/act_sign_up_email"
+                    style="@style/EditText"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+                <LinearLayout style="@style/ValidLinearLayout">
+
+                    <EditText
+                        android:id="@+id/act_sign_up_username"
+                        style="@style/ValidEditText"
+                        android:hint="@string/username"
+                        android:inputType="text" />
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/act_sign_up_username_valid_icon"
+                        style="@style/ValidImageView" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/act_sign_up_password"
+                    style="@style/EditText"
+                    android:hint="@string/password"
+                    android:maxLength="15"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/act_sign_up_promo_code"
+                    style="@style/EditText"
+                    android:hint="@string/promo_code"
+                    android:inputType="text" />
+
+
+                <TextView
+                    android:id="@+id/act_sign_up"
+                    style="@style/Button"
+                    android:text="@string/sign_up" />
+
+                <TextView
+                    android:id="@+id/btn_login_with_facebook"
+                    style="@style/Button"
+                    android:text="@string/log_in_with_facebook" />
+
+                <TextView
+                    android:id="@+id/btn_login_with_google"
+                    style="@style/Button"
+                    android:text="@string/log_in_with_google" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fb_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

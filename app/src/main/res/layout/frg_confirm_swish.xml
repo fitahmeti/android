@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.app.swishd.home.send.model.CreateItemModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@{item.getsJobTitle()}"
+                    android:textSize="18sp"
+                    android:inputType="textCapWords"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@{item.getsSizeType()}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/your_price"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@{item.getsRecommendedPrice()}"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/regular_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/pick_up_date"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/frg_confirm_swish_pick_up_date"
+                        style="@style/regular_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/pick_up_date"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        style="@style/regular_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/drop_off_date"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/frg_confirm_swish_drop_date"
+                        style="@style/regular_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/pick_up_date"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/from"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@{item.getsPickAddress()}"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/to"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@{item.getsDropAddress()}"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <include layout="@layout/divider" />
+
+                <Button
+                    android:id="@+id/frg_confirm_swish"
+                    style="@style/Button"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/upload_job" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

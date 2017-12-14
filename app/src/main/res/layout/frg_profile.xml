@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="profile"
+            type="com.app.swishd.home.profile.model.UserProfile" />
+    </data>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="?android:attr/actionBarSize"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_15sdp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_10sdp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/img_profile"
+                                    android:layout_width="@dimen/_62sdp"
+                                    android:layout_height="@dimen/_62sdp"
+                                    android:src="@drawable/ic_person"
+                                    app:civ_border_color="#FF000000"
+                                    app:civ_border_width="1dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text='@{profile.getUsername()}'
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp"
+                                    tools:text="YOUR USERNAME" />
+
+                                <FrameLayout
+                                    android:id="@+id/btn_wallet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="@dimen/_20sdp"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text='@{"£"+ profile.getIntWalletAmount()}'
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        tools:text="(£) WALLET TOTAL" />
+
+                                    <android.support.v7.widget.AppCompatImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="right|center_vertical"
+                                        app:srcCompat="@drawable/ic_right" />
+                                </FrameLayout>
+
+                                <TextView
+                                    android:id="@+id/btn_edit_profile"
+                                    android:layout_width="@dimen/_118sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:background="@drawable/drw_button_background"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="EDIT DETAILS"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text="VERIFICATIONS"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.app.swishd.widget.ProfileVerificationView
+                            android:id="@+id/verify_view_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:text="VERIFY EMAIL ADDRESS"
+                            app:verified="@{profile.getEmailVerify()==1}"
+                            app:verified_text="VERIFIED EMAIL ADDRESS" />
+
+                        <com.app.swishd.widget.ProfileVerificationView
+                            android:id="@+id/verify_view_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:text="ENTER MOBILE"
+                            app:verified="@{profile.getMobileVerify()==1}"
+                            app:verified_text="VERIFIED MOBILE" />
+
+                        <com.app.swishd.widget.ProfileVerificationView
+                            android:id="@+id/verify_view_linkedin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:text="LINKEDIN CONNECT"
+                            app:verified="@{profile.getLinkedinVerify()==1}"
+                            app:verified_text="LINKEDIN VERIFIED" />
+
+                        <com.app.swishd.widget.ProfileVerificationView
+                            android:id="@+id/verify_view_facebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:text="FACEBOOK CONNECT"
+                            app:verified="@{profile.getFacebookVerify()==1}"
+                            app:verified_text="FACEBOOK VERIFIED" />
+
+                        <com.facebook.login.widget.LoginButton
+                            android:id="@+id/fb_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginTop="30dp"
+                            android:visibility="gone" />
+
+                        <com.app.swishd.widget.ProfileVerificationView
+                            android:id="@+id/verify_view_proof"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:text="VERIFY ID"
+                            app:verified="@{profile.getProofVerify()==1}"
+                            app:verified_text="VERIFIED ID" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:background="@android:color/white"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/btn_more"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:padding="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_settings" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/btn_notification"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_notifications" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Profile"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </android.support.v7.widget.Toolbar>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <include layout="@layout/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_swisher"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:background="@drawable/btn_sender_swishr_selector">
+
+                            <TextView
+                                android:id="@+id/tv_swishr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:text="SWISHR"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_swishr_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:layout_toRightOf="@+id/tv_swishr"
+                                android:background="@drawable/bg_badge_selector"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:maxWidth="@dimen/_30sdp"
+                                android:minWidth="@dimen/_16sdp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_10sdp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_sender"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:background="@drawable/btn_sender_swishr_selector">
+
+                            <TextView
+                                android:id="@+id/tv_sendr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:text="SENDR"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_sendr_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:layout_toRightOf="@+id/tv_sendr"
+                                android:background="@drawable/bg_badge_selector"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:maxWidth="@dimen/_30sdp"
+                                android:minWidth="@dimen/_16sdp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_10sdp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@android:color/black" />
+                </LinearLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <com.app.swishd.widget.NonSwipeableViewPager
+                android:id="@+id/jobViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</layout>

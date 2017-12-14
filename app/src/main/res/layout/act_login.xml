@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/act_login_toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <EditText
+                android:id="@+id/act_login_username"
+                style="@style/EditText"
+                android:inputType="text"
+                android:hint="@string/username_email" />
+
+            <EditText
+                android:id="@+id/act_login_password"
+                style="@style/EditText"
+                android:inputType="textPassword"
+                android:hint="@string/password" />
+
+
+            <TextView
+                android:id="@+id/act_login_forgot_password"
+                style="@style/regular_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/forgotten_your_password"
+                android:textColor="@color/blue_royal" />
+
+            <TextView
+                android:id="@+id/act_login"
+                style="@style/Button"
+                android:text="@string/log_in" />
+
+            <TextView
+                android:id="@+id/btn_login_with_facebook"
+                style="@style/Button"
+                android:text="@string/log_in_with_facebook" />
+
+            <TextView
+                android:id="@+id/btn_login_with_google"
+                style="@style/Button"
+                android:text="@string/log_in_with_google" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fb_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

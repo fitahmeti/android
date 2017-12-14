@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:contentInsetStart="0dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="@dimen/_12sdp"
+                    app:srcCompat="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Draft Message"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </android.support.v7.widget.Toolbar>
+        </FrameLayout>
+
+        <include layout="@layout/divider" />
+
+        <EditText
+            android:id="@+id/edt_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/drw_button_background"
+            android:gravity="top|left"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/drw_button_background"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Send"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+</layout>

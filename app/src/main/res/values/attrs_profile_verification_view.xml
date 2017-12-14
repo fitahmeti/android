@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="ProfileVerificationView">
+        <attr name="text" format="string" />
+        <attr name="verified_text" format="string" />
+        <attr name="verified" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Search"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/divider" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:contentPadding="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/regular_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="@string/my_journey_happens"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drw_round_corner_gray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/frg_advanced_search_anytime"
+                            style="@style/regular_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/anytime"
+                            android:textColor="@color/gray_dark"
+                            android:textStyle="bold"
+                            android:background="@drawable/selector_advanced_search_journey"/>
+
+                        <TextView
+                            android:id="@+id/frg_advanced_search_everyday"
+                            style="@style/regular_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:layout_marginRight="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/everyday"
+                            android:textColor="@color/gray_dark"
+                            android:textStyle="bold"
+                            android:background="@drawable/selector_advanced_search_journey"
+                            />
+
+                        <TextView
+                            android:id="@+id/frg_advanced_search_specific_date"
+                            style="@style/regular_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:layout_marginRight="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/specific_date"
+                            android:textColor="@color/gray_dark"
+                            android:textStyle="bold"
+                            android:background="@drawable/selector_advanced_search_journey"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/frg_advanced_week_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:contentPadding="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drw_round_corner_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/only_show_swished_coolection_point"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/frg_advanced_search_swiss_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/frg_advanced_search_done"
+            style="@style/Button"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/done" />
+
+    </LinearLayout>
+</layout>
